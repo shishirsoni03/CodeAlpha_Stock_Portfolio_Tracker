@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 import time
 
-API_KEY = '3LQJ98K26BFW0JCC'  # Replace with your actual API key
+API_KEY = 'Enter_your_API_KEY'  # Replace with your actual API key
 
 class StockTracker:
 
@@ -31,16 +31,6 @@ class StockTracker:
     def view_holdings(self):
         return self.holdings
 
-    # def get_current_price(self, symbol):
-    #     url = f'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={symbol}&interval=1min&apikey={API_KEY}'
-    #     response = requests.get(url)
-    #     data = response.json()
-    #     try:
-    #         latest_close = float(list(data['Time Series (1min)'].values())[0]['4. close'])
-    #         return latest_close
-    #     except KeyError:
-    #         print(f"Data unavailable for {symbol}. Please check the symbol and try again.")
-    #         return None
     def get_current_price(self, symbol):
         url = f'https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol={symbol}&interval=1min&apikey={API_KEY}'
         try:
